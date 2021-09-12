@@ -39,7 +39,7 @@ const getWeekNoByTimeStamp = (timeStamp) => {
 const computeDayChange = kLineData => {
   let firstPrice
   let weekNo
-  let kLineArrByWeekNo = [[], [], [], [], [], [], []]
+  let kLineArrByWeekNo = new Array(7).fill([])
   for (let i = 0; i < kLineData.length; i++) {
     if (i === 0) {
       firstPrice = kLineData[i].close
